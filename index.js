@@ -86,7 +86,7 @@ module.exports = function(opts){
   };
   
   log("Using config " + path.resolve(path.basename(config.input)).magenta);
-	
+  
   devizr = require(config.input);
   
   objectKeys = createKeyArray();
@@ -151,7 +151,7 @@ module.exports = function(opts){
           
     output.push(bp);  
     
-		// some cleanup
+    // some cleanup
     delete breakpoint.width;
     delete breakpoint.addons;
     
