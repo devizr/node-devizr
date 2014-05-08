@@ -1,0 +1,30 @@
+{
+  "name": "node-devizr",
+  "version": "0.1.0",
+  "description": "Devizr Task Runner Helper",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "author": "Uli Preuss",
+  "license": "MIT",
+  "dependencies": {
+    "colors": "^0.6.2"
+  },
+  "devDependencies": {
+    "mocha": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/up/node-devizr.git"
+  },
+  "keywords": [
+    "js",
+    "css",
+    "features",
+    "detection",
+    "optimize",
+    "devizr",
+    "task"
+  ]
+}

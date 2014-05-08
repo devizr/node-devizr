@@ -1,0 +1,38 @@
+{
+  "name": "node-devizr test",
+  "version": "0.0.5",
+  "breakpoints": [
+    {
+      "width": 0,
+			"addons": {
+				"mobilenavigation": {
+			    "script": {
+            "src": "src/js/mobile.js",
+            "dest": "dest/mobile.min.js"
+			    },
+			    "complete": "app.initMobileNavigation"	
+				}
+			}
+    },
+    {
+      "width": 767,
+      "addons": {
+        "animation": {
+					"tests": [
+						"requestanimationframe",
+						"!touch"
+					],
+          "script": {
+            "src": "src/js/libs/*.js",
+            "dest": "dest/animation.min.js"
+          },
+          "style": {
+            "src": "src/css/animation.css",
+            "dest": "dest/animation.min.css"
+          },
+          "complete": "app.initAnimations"
+        }
+      }
+    }
+  ]
+}
