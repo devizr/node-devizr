@@ -1,0 +1,13 @@
+# OS Generated Files
+.DS_Store
+
+# Local development (files and folders)
+# starting with an unterscore
+\_*
+
+# NodeJS
+node_modules
+
+# Test files and folders
+src
+gulpfile.js
