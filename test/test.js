@@ -2,11 +2,11 @@ var fs = require('fs');
 var assert = require('assert');
 
 if(!fs.existsSync("dest")){
-	fs.mkdirSync("dest", function(err){
-		if(err){ 
-			throw err;
-		}
-	});   
+  fs.mkdirSync("dest", function(err){
+    if(err){ 
+      throw err;
+    }
+  });   
 }
 
 function numKeys(obj) {
