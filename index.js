@@ -9,7 +9,6 @@ var fs = require('fs');
 var path = require('path');
 var os = require('os');
 var colors = require('colors');
-
 var devizr, config;
 var breakpoints = {};
 var output = [];
@@ -26,7 +25,7 @@ function getKeys(obj) {
         objectKeys.push(key);
       }
       if (typeof obj[key] == "object")
-          getKeys(obj[key]);
+        getKeys(obj[key]);
      }
   }
   return objectKeys;
