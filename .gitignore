@@ -10,4 +10,5 @@ node_modules
 
 # Test files and folders
 src
+dest
 gulpfile.js

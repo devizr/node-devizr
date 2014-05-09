@@ -5,9 +5,9 @@
 /* jshint node:true, esnext:true */
 /* global devizrconf */
 
-var fs     = require('fs');
-var path   = require('path');
-var os     = require('os');
+var fs = require('fs');
+var path = require('path');
+var os = require('os');
 var colors = require('colors');
 
 var devizr, config;

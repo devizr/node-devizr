@@ -1,6 +1,18 @@
 var fs = require('fs');
 var assert = require('assert');
 
+if(!fs.existsSync("dest")){
+	fs.mkdirSync("dest", function(err){
+		if(err){ 
+			throw err;
+		}
+	});   
+}
+
+function numKeys(obj) {
+  return Object.keys(obj).length;
+}
+
 var options = {
   input: './test/node-devizr.json',
   output: './dest/breakpoints.js',
@@ -8,10 +20,6 @@ var options = {
 };
 
 var devizr  = require('../index')(options);
-
-function numKeys(obj) {
-  return Object.keys(obj).length;
-}
 
 describe('node-devizr tests', function(){
   
@@ -28,18 +36,17 @@ describe('node-devizr tests', function(){
   describe('Addon tests', function(){
 
     var addon = devizr[767].animation;
-    var script = addon.script;
 
     it('should return script src', function(){
-      assert.equal(script.src, 'src/js/libs/*.js'); 
+      assert.equal(addon.script.src, 'src/js/libs/*.js'); 
     });
 
     it('should return script out', function(){
-      assert.equal(script.out, 'animation.min.js'); 
+      assert.equal(addon.script.out, 'animation.min.js'); 
     });
 
     it('should return script dest', function(){
-      assert.equal(script.dest, 'dest'); 
+      assert.equal(addon.script.dest, 'dest'); 
     });
     
     it('should return tests configuration as string', function(){
